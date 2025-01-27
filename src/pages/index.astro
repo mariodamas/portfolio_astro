@@ -1,11 +1,36 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import SocialPill from '../components/SocialPill.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Mario Damas Portfolio">
+    <main>
+        <section class="w-full mx-auto lg:w-[740px] py-44">
+            <div class="flex items-center gap-x-4" gap-y-4>
+                <h1 class="text-white text-5xl font-bold">Hola, soy Mario Damas!</h1>
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQGtHZ9_JyrcNQ/profile-displayphoto-shrink_400_400/B56ZOc.i0tGcAg-/0/1733505462118?e=1743033600&v=beta&t=-v3W6oGBYhv0d8RLQWZ05usG4s7Q0suusZdNw15wMBM" alt="Mario Damas" class="rounded-full w-40 h-40 mb-4" />
+            </div>
+            <h2 class="text-white text-xl text-wrap "><span class="text-red-200/90">Apasionado por la tecnología y el desarrollo de software.</span>
+				Estudiante de 3º de Ingeniería Informática en la <span class="text-green-300/90">Universidad de Castilla-La Mancha, Ciudad Real</span> y actualmente perfeccionando mis conocimientos en 
+				<span class="text-yellow-200/70">University of Birmingham</span>
+			</h2>
+            
+               <nav class="flex justify-center gap-4 mt-8"> 
+
+                <SocialPill href="https://www.linkedin.com/in/mariodamassanchez">
+                    <img src="/src/assets/linkedin.svg" alt="LinkedIn" class="w-5 h-5" />LinkedIn
+                </SocialPill>
+                    
+                <SocialPill href="https://github.com/mariodamas">
+                    <img src="/src/assets/github.svg" alt="Github" class="w-5 h-5" />GitHub
+                </SocialPill>
+                
+                <SocialPill href="https://drive.google.com/file/d/1qZm3e5FrbtmMKBNT1jfhqJ5M8RwviI2P/view?usp=sharing">
+                    <img src="/src/assets/drive.svg" alt="CV_photo" class="w-5 h-5" />Accede a mi CV
+                </SocialPill>
+                    
+               </nav>
+        </section>
+    </main>
 </Layout>
