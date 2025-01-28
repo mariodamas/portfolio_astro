@@ -2,9 +2,11 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import SocialPill from '../components/SocialPill.astro';
+import Background from '../components/Background.astro';
 ---
 
-<Layout title="Mario Damas Portfolio">
+<Layout title="Portfolio de Mario Damas - Futuro Ingeniero de Software 🚀"
+description="Portfolio de Mario Damas, estudiante de Ingeniería Informática en la Universidad de Castilla-La Mancha y actualmente en la University of Birmingham.">
     <main>
         <section class="w-full mx-auto lg:w-[740px] py-44">
             <div class="flex items-center gap-x-4" gap-y-4>
@@ -19,18 +21,26 @@ import SocialPill from '../components/SocialPill.astro';
                <nav class="flex justify-center gap-4 mt-8"> 
 
                 <SocialPill href="https://www.linkedin.com/in/mariodamassanchez">
-                    <img src="/src/assets/linkedin.svg" alt="LinkedIn" class="w-5 h-5" />LinkedIn
+                    <img src="/src/assets/linkedin.svg" alt="LinkedIn" class="size-5" />LinkedIn
                 </SocialPill>
                     
                 <SocialPill href="https://github.com/mariodamas">
-                    <img src="/src/assets/github.svg" alt="Github" class="w-5 h-5" />GitHub
+                    <img src="/src/assets/github.svg" alt="Github" class="size-5" />GitHub
                 </SocialPill>
                 
-                <SocialPill href="https://drive.google.com/file/d/1qZm3e5FrbtmMKBNT1jfhqJ5M8RwviI2P/view?usp=sharing">
-                    <img src="/src/assets/drive.svg" alt="CV_photo" class="w-5 h-5" />Accede a mi CV
+                <SocialPill href="https://drive.google.com/file/d/1Pcgg1BUgXNi33_s7IPu-yOFyOSIQ_sCi/view?usp=sharing">
+                    <img src="/src/assets/cv.svg" alt="CV_photo" class="size-6" />Accede a mi CV
+                </SocialPill>
+
+                <SocialPill href="mailto:mariodamassanchez@gmail.com">
+                    <img src="/src/assets/mail.svg" alt="CV_photo" class="size-5" />Contactame por email
                 </SocialPill>
                     
                </nav>
+        </section>
+
+        <section class="w-full mx-auto lg:w-[740px] py-44">
+            <Background />
         </section>
     </main>
 </Layout>
