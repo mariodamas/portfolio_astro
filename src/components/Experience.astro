@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [{
+    date : 'Marzo 2024 - Junio 2024',
+    title: 'Asistente en Evaluación del Profesorado',
+    company: 'Universidad de Castilla-La Mancha',
+    description: 'Durante este período, lideré la distribución estratégica de encuestas de evaluación docente en múltiples departamentos, asegurando una alta participación y coordinándome con equipos internos para optimizar los procesos de distribución y maximizar la eficiencia.',
+    link: ''
+},
+{
+    date : 'Septiembre 2023 - Diciembre 2023',
+    title: 'Desarrollador de Software',
+    company: 'University of Birmingham',
+    description: 'En este rol, trabajé en un equipo de 5 personas para desarrollar una aplicación de gestión de tareas en React y Firebase. Colaboré en la creación de la arquitectura de la aplicación, implementé nuevas funcionalidades y realicé pruebas de integración.',
+    link: ''
+}];
+---
+<h2 class="text-white text-3xl font-bold justify-center">Experiencia</h2> 
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+                     
+    {EXPERIENCE.map(experience => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience} />
+        </li>                
+    ))}
+</ol>
+
+
+
