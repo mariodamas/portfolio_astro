@@ -1,0 +1,34 @@
+---
+import EducationItem from "./EducationItem.astro";
+const EDUCATION = [
+{
+    date : 'Septiembre 2024 - Junio 2025',
+    title: 'Computer Science Degree',
+    school: 'University of Birmingham',
+    school_logo: 'https://universitas21.com/wp-content/uploads/2018/04/1200px-BirminghamUniversityCrest.svg_-31f.png'
+},
+{
+    date : 'Septiembre 2020 - Actualidad',
+    title: 'Grado en Ingeniería Informática',
+    school: 'Universidad de Castilla-La Mancha',
+    company_logo: 'https://www.cogitialbacete.org/wp-content/uploads/2023/09/UCLM-Logo.png'
+},
+{
+    date : 'Septiembre 2017 - Junio 2020',
+    title: 'Bachillerato de Ciencias y Tecnología',
+    school: 'IES Santa María de Alarcos',
+    school_logo: ''
+}
+];
+---
+<h2 class="text-white text-3xl font-bold justify-center">Educación</h2>
+<ol class="items-center sm:flex ">
+    {EDUCATION.map(education => (
+        <li class="relative mb-10 sm:mb-0">
+            <EducationItem {...education} />
+        </li>                
+    ))}
+</ol>
+
+
+

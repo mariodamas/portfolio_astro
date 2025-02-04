@@ -1,0 +1,36 @@
+---
+import ProjectItem from './ProjectItem.astro';
+const PROJECTS = [
+{
+    title: 'Portfolio',
+    description : 'Portafolio profesional creado con Astro, una herramienta moderna para desarrollar sitios web rápidos y eficientes. Integra Tailwind CSS para un diseño atractivo y adaptable a diferentes dispositivos. Está alojado en GitHub Pages, facilitando su acceso y visualización en cualquier momento.',
+    link: 'https://github.com/mariodamas/portfolio_astro',
+    image: 'src/assets/foto_portfolio.png',
+    text_link: 'Disponible en GitHub'
+},
+{
+    title: 'SSH Recipes',
+    description : 'Aplicación de recetas basada en los ingredientes disponibles del usuario, diseñada para ofrecer sugerencias prácticas y adaptadas a sus necesidades. Construida con React Native y Expo, esta herramienta es ideal para uso multiplataforma y permite personalizar las recetas.',
+    link: '',
+    image: 'src/assets/foto_ssh_recipes.png',
+    text_link: 'Disponible en GitHub'
+},
+{
+    title: 'Socios Web',
+    description : 'Proyecto de comercio electrónico enfocado en ofrecer servicios para empresas deportivas. La página web utiliza tecnologías como HTML, CSS y JavaScript en el frontend, mientras que el backend se desarrolló con Node.js y Express. Actualmente, el sitio está en proceso y muy pronto será lanzado.',
+    link: 'https://github.com/mariodamas/prueba_nueva',
+    image: 'src/assets/foto_socios.png',
+    text_link: 'Backend en GitHub'
+}
+];
+---
+
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white">Projects</h1>
+<p class="mt-2 text-lg text-center text-gray-500 dark:text-gray-400 mb-6">Estos son algunos proyectos en los que he trabajado.</p>
+<div class="justify-center items-start flex space-x-7 max-w-7xl mx-auto">
+    {PROJECTS.map(project => (
+        <div class="flex-1 flex justify-center">
+            <ProjectItem {...project} />
+        </div>
+    ))}
+</div>

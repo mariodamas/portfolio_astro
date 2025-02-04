@@ -3,6 +3,8 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
+import Education from '../components/Education.astro';
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Portfolio de Mario Damas - Futuro Ingeniero de Software 🚀"
@@ -42,5 +44,9 @@ description="Portfolio de Mario Damas, estudiante de Ingeniería Informática en
         <section class="w-full mx-auto lg:w-[740px] py-20">
             <Experience />
         </section>
+        <section id="Projects" class="w-full mx-auto lg:w-[740px] py-20">
+            <Projects />
+        </section>
     </main>
+    
 </Layout>
