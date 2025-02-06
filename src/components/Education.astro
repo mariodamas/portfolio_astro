@@ -1,34 +1,32 @@
 ---
 import EducationItem from "./EducationItem.astro";
 const EDUCATION = [
-{
-    date : 'Septiembre 2024 - Junio 2025',
-    title: 'Computer Science Degree',
+    {
+    date : 'September 2024 - June 2025',
+    title : 'Bachelor of Computer Science (Erasmus+)',
     school: 'University of Birmingham',
-    school_logo: 'https://universitas21.com/wp-content/uploads/2018/04/1200px-BirminghamUniversityCrest.svg_-31f.png'
+    school_logo: 'https://fundit.fr/sites/default/files/styles/max_650x650/public/actors/2281-universite-birmingham.png?itok=KBSykLre'
+
+    },
+    {
+    date : 'September 2020 - Present',
+    title: 'Bachelor of Computer Science',
+    school: 'University of Castilla-La Mancha',
+    school_logo: 'https://www.cogitialbacete.org/wp-content/uploads/2023/09/UCLM-Logo.png'
 },
 {
-    date : 'Septiembre 2020 - Actualidad',
-    title: 'Grado en Ingeniería Informática',
-    school: 'Universidad de Castilla-La Mancha',
-    company_logo: 'https://www.cogitialbacete.org/wp-content/uploads/2023/09/UCLM-Logo.png'
-},
-{
-    date : 'Septiembre 2017 - Junio 2020',
-    title: 'Bachillerato de Ciencias y Tecnología',
+    date : 'September 2017 - June 2020',
+    title: 'Secondary Compulsary Education',
     school: 'IES Santa María de Alarcos',
-    school_logo: ''
+    school_logo: 'https://iesalarcos.com/wp-content/uploads/2024/10/santa-maria-alarcos-logo.png' // Update this path to the correct image path
 }
 ];
 ---
-<h2 class="text-white text-3xl font-bold justify-center">Educación</h2>
-<ol class="items-center sm:flex ">
-    {EDUCATION.map(education => (
-        <li class="relative mb-10 sm:mb-0">
-            <EducationItem {...education} />
-        </li>                
-    ))}
-</ol>
-
-
-
+<h2 class="text-white text-3xl font-bold justify-center mb-16">Education</h2>
+<div class="grid grid-cols-3 gap-4 mt-4 md:grid-cols- justify-center">
+        {EDUCATION.map(education => (
+           <div class="max-w-sm p-9 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300 ease-in-out">
+                <EducationItem {...education} />
+            </div>              
+        ))}
+</div>
