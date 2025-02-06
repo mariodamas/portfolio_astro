@@ -5,20 +5,22 @@ import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import Education from '../components/Education.astro';
 import Projects from '../components/Projects.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Portfolio de Mario Damas - Futuro Ingeniero de Software 🚀"
 description="Portfolio de Mario Damas, estudiante de Ingeniería Informática en la Universidad de Castilla-La Mancha y actualmente en la University of Birmingham.">
     <main>
-        <section class="w-full mx-auto lg:w-[740px] py-44">
+        <section id="Home" class="w-full mx-auto lg:w-[740px] py-44">
             <div class="flex items-center gap-x-4 gap-y-4">
                 <h1 class="text-white text-5xl font-bold">Hola, soy Mario Damas!</h1>
                 <img src="https://media.licdn.com/dms/image/v2/D5603AQGtHZ9_JyrcNQ/profile-displayphoto-shrink_400_400/B56ZOc.i0tGcAg-/0/1733505462118?e=1743033600&v=beta&t=-v3W6oGBYhv0d8RLQWZ05usG4s7Q0suusZdNw15wMBM" alt="Mario Damas" class="rounded-full w-40 h-40 mb-4" />
             </div>
-            <h2 class="text-white text-xl text-wrap "><span class="text-red-200/90">Apasionado por la tecnología y el desarrollo de software.</span>
-				Estudiante de 3º de Ingeniería Informática en la <span class="text-green-300/90">Universidad de Castilla-La Mancha, Ciudad Real</span> y actualmente perfeccionando mis conocimientos en 
-				<span class="text-yellow-200/70">University of Birmingham</span>
-			</h2>
+            <h2 class="text-white text-xl text-wrap">
+                <span class="text-red-200/90">Passionate about technology and software development.</span>
+                3rd year Computer Engineering student at the <span class="text-green-300/90">University of Castilla-La Mancha, Ciudad Real</span> and currently enhancing my knowledge at the 
+                <span class="text-yellow-200/70">University of Birmingham</span>
+            </h2>
             
                <nav class="flex justify-center gap-4 mt-8"> 
 
@@ -31,11 +33,11 @@ description="Portfolio de Mario Damas, estudiante de Ingeniería Informática en
                 </SocialPill>
                 
                 <SocialPill href="https://drive.google.com/file/d/1Pcgg1BUgXNi33_s7IPu-yOFyOSIQ_sCi/view?usp=sharing">
-                    <img src="/src/assets/cv.svg" alt="CV_photo" class="size-6" />Accede a mi CV
+                    <img src="/src/assets/cv.svg" alt="CV_photo" class="size-6" />Access my CV
                 </SocialPill>
 
                 <SocialPill href="mailto:mariodamassanchez@gmail.com">
-                    <img src="/src/assets/mail.svg" alt="CV_photo" class="size-5" />Contactame por email
+                    <img src="/src/assets/mail.svg" alt="CV_photo" class="size-5" />Contact me by email
                 </SocialPill>
                     
                </nav>
@@ -47,6 +49,11 @@ description="Portfolio de Mario Damas, estudiante de Ingeniería Informática en
         <section id="Projects" class="w-full mx-auto lg:w-[740px] py-20">
             <Projects />
         </section>
+        <section>
+            <Footer />
+        </section>
+
+        
     </main>
     
 </Layout>

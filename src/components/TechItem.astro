@@ -1,0 +1,17 @@
+---
+const { name, image_url } = Astro.props;
+---
+<div class="relative inline-block group">
+    <div class="absolute z-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-sm font-medium font-size-6 px-3 py-2 rounded-lg shadow-lg dark:bg-gray-700">
+        {name}
+        <div class="tooltip-arrow" data-popper-arrow></div>
+    </div>
+    <img class="w- h-10 rounded-sm" src={image_url} alt={name}>
+</div>
+
+<style>
+    .group:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>

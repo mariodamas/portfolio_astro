@@ -3,30 +3,50 @@ import ProjectItem from './ProjectItem.astro';
 const PROJECTS = [
 {
     title: 'Portfolio',
-    description : 'Portafolio profesional creado con Astro, una herramienta moderna para desarrollar sitios web rápidos y eficientes. Integra Tailwind CSS para un diseño atractivo y adaptable a diferentes dispositivos. Está alojado en GitHub Pages, facilitando su acceso y visualización en cualquier momento.',
+    description : 'Professional portfolio created with Astro, a modern tool for developing fast and efficient websites. It integrates Tailwind CSS for an attractive and adaptable design for different devices. It is hosted on GitHub Pages, making it significantly easy to access and view at any time.',
     link: 'https://github.com/mariodamas/portfolio_astro',
     image: 'src/assets/foto_portfolio.png',
-    text_link: 'Disponible en GitHub'
+    text_link: 'Available on GitHub',
+    techs: [
+        { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
+        { url: "https://astro.build/assets/press/astro-icon-light-gradient.png", name: "Astro" },
+        { url: "https://kalimahapps.gallerycdn.vsassets.io/extensions/kalimahapps/tailwindcss-kit/1.0.4/1688444804387/Microsoft.VisualStudio.Services.Icons.Default", name: "Tailwind CSS" }
+    ]
 },
 {
     title: 'SSH Recipes',
-    description : 'Aplicación de recetas basada en los ingredientes disponibles del usuario, diseñada para ofrecer sugerencias prácticas y adaptadas a sus necesidades. Construida con React Native y Expo, esta herramienta es ideal para uso multiplataforma y permite personalizar las recetas.',
+    description : 'Recipe application based on the user\'s available ingredients, designed to offer practical and tailored suggestions. Built with React Native and Expo, this tool is ideal for cross-platform use and allows recipes to be customized according to the user\'s needs.',
     link: '',
     image: 'src/assets/foto_ssh_recipes.png',
-    text_link: 'Disponible en GitHub'
+    text_link: 'Available on GitHub',
+    techs: [
+        { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
+        { url: "https://skillforge.com/wp-content/uploads/2020/10/javascript.png", name: "JavaScript" },
+        {url : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png", name: "React Native" },
+        {url: "https://avatars.githubusercontent.com/u/98495527?v=4", name:"Hono.js"},
+        {url:"https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png", name:"MySQL"}
+
+    ]
 },
 {
     title: 'Socios Web',
-    description : 'Proyecto de comercio electrónico enfocado en ofrecer servicios para empresas deportivas. La página web utiliza tecnologías como HTML, CSS y JavaScript en el frontend, mientras que el backend se desarrolló con Node.js y Express. Actualmente, el sitio está en proceso y muy pronto será lanzado.',
+    description : 'E-commerce project focused on providing services for sports companies. The website uses technologies such as HTML, CSS, and JavaScript on the frontend, while the backend was developed with Node.js and Express. The site will be launched soon.',
     link: 'https://github.com/mariodamas/prueba_nueva',
     image: 'src/assets/foto_socios.png',
-    text_link: 'Backend en GitHub'
+    text_link: 'Backend on GitHub',
+    techs: [
+        { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
+        { url: "https://skillforge.com/wp-content/uploads/2020/10/javascript.png", name: "JavaScript" },
+        {url:"https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png", name:"MySQL"},
+        {url:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png", name:"Node.js"},
+        
+    ]
 }
 ];
 ---
 
 <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Projects</h1>
-<p class="mt-2 text-lg text-center text-gray-500 dark:text-gray-400 mb-6">Estos son algunos proyectos en los que he trabajado.</p>
+<p class="mt-2 text-lg text-center text-gray-500 dark:text-gray-400 mb-6">Here are some of the projects I've worked on.</p>
 <div class="justify-center items-start flex space-x-7 max-w-7xl mx-auto">
     {PROJECTS.map(project => (
         <div class="flex-1 flex justify-center">
