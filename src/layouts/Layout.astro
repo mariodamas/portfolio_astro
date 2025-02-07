@@ -1,41 +1,41 @@
 ---
+// filepath: /C:/Users/mario/Desktop/Dev/portfolio_astro/portfolio_astro/src/layouts/Layout.astro
 import Header from "../components/Header.astro";
 ---
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/portfolio_astro/mlogo.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Mario Damas' Portofolio - Future Software Engineer 🚀</title>
-	</head>
-	
-	<body class="relative text-black text-white bg-gray-50 bg-gray-950">
-		<div
-		  class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 bg-gray-950
-		  bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-		  bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
-		</div>
-	<Header />
-		<slot />
-		<nav>
-			
-		</nav>
-	</body>
-	
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/portfolio_astro/mlogo.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Mario Damas' Portfolio - Future Software Engineer 🚀</title>
+    </head>
+    
+    <body class="relative text-white bg-gray-950">
+        <div
+          class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-950
+          bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+        >
+        </div>
+        <Header />
+        <slot />
+        <nav>
+            
+        </nav>
+    </body>
+    
 </html>
 
 <style is:global>
-	html{
-	  font-family: system-ui, sans-serif;
-	}
-	body {
-        color: rgba(17, 17, 17, 0.9);
+    html {
+        font-family: system-ui, sans-serif;
+    }
+    body {
+        color: rgba(255, 255, 255, 0.9);
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         overscroll-behavior: none;
-      }
+    }
 </style>
