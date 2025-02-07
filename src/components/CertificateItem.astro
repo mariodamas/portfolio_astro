@@ -1,0 +1,13 @@
+---
+const { date, title, img_link, link } = Astro.props;
+---
+<div class="flex flex-col items-center text-center">
+    <img src={img_link} alt={title} class="w- h-20 mb-4" />
+    <div>
+        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+    </div>
+    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">{date}</p>
+    <a href={link} target="_blank" class="inline-flex font-medium items-center text-blue-600">
+        Download Certificate
+    </p>
+</div>
