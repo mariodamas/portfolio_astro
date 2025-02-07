@@ -5,7 +5,7 @@ const PROJECTS = [
     title: 'Portfolio',
     description : 'Professional portfolio created with Astro, a modern tool for developing fast and efficient websites. It integrates Tailwind CSS for an attractive and adaptable design for different devices. It is hosted on GitHub Pages, making it significantly easy to access and view at any time.',
     link: 'https://github.com/mariodamas/portfolio_astro',
-    image: '/portfolio_astro/src/assets/foto_portfolio.png',
+    image: '/portfolio_astro/foto_portfolio.webp',
     text_link: 'Available on GitHub',
     techs: [
         { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
@@ -17,7 +17,7 @@ const PROJECTS = [
     title: 'SSH Recipes',
     description : 'Recipe application based on the user\'s available ingredients, designed to offer practical and tailored suggestions. Built with React Native and Expo, this tool is ideal for cross-platform use and allows recipes to be customized according to the user\'s needs.',
     link: 'https://github.com/ivan-korniichuk/shh-recipes',
-    image: '/portfolio_astro/src/assets/foto_ssh_recipes.png',
+    image: '/portfolio_astro/foto_ssh_recipes.webp',
     text_link: 'Available on GitHub',
     techs: [
         { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
@@ -32,7 +32,7 @@ const PROJECTS = [
     title: 'Socios Web',
     description : 'E-commerce project focused on providing services for sports companies. The website uses technologies such as HTML, CSS, and JavaScript on the frontend, while the backend was developed with Node.js and Express. The site will be launched soon.',
     link: 'https://github.com/mariodamas/prueba_nueva',
-    image: '/portfolio_astro/src/assets/foto_socios.png',
+    image: '/portfolio_astro/socios_photo.webp',
     text_link: 'Backend on GitHub',
     techs: [
         { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
@@ -46,9 +46,9 @@ const PROJECTS = [
 ---
 
 <h2 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl dark:text-white mb-7">Projects</h2>
-<div class="justify-center items-start flex space-x-7 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
     {PROJECTS.map(project => (
-        <div class="flex-1 flex justify-center">
+        <div class="flex justify-center">
             <ProjectItem {...project} />
         </div>
     ))}

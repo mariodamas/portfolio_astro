@@ -11,54 +11,56 @@ import About from '../components/About.astro';
 
 <Layout title="Portfolio de Mario Damas - Futuro Ingeniero de Software 🚀"
 description="Portfolio de Mario Damas, estudiante de Ingeniería Informática en la Universidad de Castilla-La Mancha y actualmente en la University of Birmingham.">
-    <main>
-        <section id="Home" class="w-full mx-auto lg:w-[740px] py-44">
+    <main class="px-4">
+        <section id="Home" class="w-full mx-auto lg:w-[740px] py-44 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <div class="flex items-center gap-x-4 gap-y-4">
-                <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">It's me, Mario Damas!</h1>
+                <h1 class="mb-4 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white">It's me, Mario Damas!</h1>
                 <img src="https://media.licdn.com/dms/image/v2/D5603AQGtHZ9_JyrcNQ/profile-displayphoto-shrink_400_400/B56ZOc.i0tGcAg-/0/1733505462118?e=1743033600&v=beta&t=-v3W6oGBYhv0d8RLQWZ05usG4s7Q0suusZdNw15wMBM" alt="Mario Damas" class="rounded-full w-40 h-40 mb-4" />
             </div>
-            <h2 class="text-white text-xl text-wrap">
+            <h2 class="text-white text-xl lg:text-2xl text-wrap max-w-[700px]">
                 <span class="text-red-200/90">Passionate about technology and software development.</span>
                 3rd year Computer Engineering student at the <span class="text-green-300/90">University of Castilla-La Mancha, Ciudad Real</span> and currently enhancing my knowledge at the 
                 <span class="text-yellow-200/70">University of Birmingham</span>
             </h2>
             
-               <nav class="flex justify-center gap-4 mt-8"> 
+               <nav class="flex justify-center gap-4 mt-8 flex-wrap"> 
 
                 <SocialPill href="/portfolio_astro/https://www.linkedin.com/in/mariodamassanchez">
-                    <img src="/portfolio_astro/public/linkedin.svg" alt="LinkedIn" class="size-5" />LinkedIn
+                    <img src="/portfolio_astro/linkedin.svg" alt="LinkedIn" class="size-5" />LinkedIn
                 </SocialPill>
                     
                 <SocialPill href="/portfolio_astro/https://github.com/mariodamas">
-                    <img src="/portfolio_astro/public/github.svg" alt="Github" class="size-5" />GitHub
+                    <img src="/portfolio_astro/github.svg" alt="Github" class="size-5" />GitHub
                 </SocialPill>
                 
                 <SocialPill href="/portfolio_astro/https://drive.google.com/file/d/1Pcgg1BUgXNi33_s7IPu-yOFyOSIQ_sCi/view?usp=sharing">
-                    <img src="/portfolio_astro/public/cv.svg" alt="CV_photo" class="size-6" />Access my CV
+                    <img src="/portfolio_astro/cv.svg" alt="CV_photo" class="size-6" />Access my CV
                 </SocialPill>
 
                 <SocialPill href="/portfolio_astro/mailto:mariodamassanchez@gmail.com">
-                    <img src="/portfolio_astro/public/mail.svg" alt="CV_photo" class="size-5" />Contact me by email
+                    <img src="/portfolio_astro/mail.svg" alt="CV_photo" class="size-5" />Contact me by email
                 </SocialPill>
                     
                </nav>
         </section>
 
-        <section id="Experience" class="w-full mx-auto lg:w-[740px] py-20">
+        <section id="Experience" class="w-full mx-auto lg:w-[740px] py-20 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <Experience />
         </section>
-        <section id="Projects" class="w-full mx-auto lg:w-[740px] py-20">
+        <section id="Projects" class="w-full mx-auto lg:w-[740px] py-20 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <Projects />
         </section>
-        <section id="Education" class="w-full mx-auto lg:w-[740px] py-20">
+        <section id="Education" class="w-full mx-auto lg:w-[740px] pt-20 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <Education />
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700">
+        </section>
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-gray-700 scroll-m-20 mx-auto container lg:max-w-4xl md:max-w-2xl">
+        <section id="Certificates" class="w-full mx-auto lg:w-[740px] scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <Certificates />
         </section>
-        <section id="About" class="w-full mx-auto lg:w-[740px] pt-60 py-60">
+        <section id="About" class="w-full mx-auto lg:w-[740px] pt-60 py-60 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <About />
         </section>  
-        <section id="Footer" class="w-full mx-auto lg:w-[740px] pt-60 py-30">
+        <section id="Footer" class="w-full mx-auto lg:w-[740px] pt-60 py-30 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
             <Footer />
         </section>
 

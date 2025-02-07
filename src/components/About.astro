@@ -4,11 +4,11 @@ import AboutItem from "./AboutItem.astro"
 const PHOTOS = [
     {
         title : 'University of Birmingham 2024-25 Season',
-        image_url : 'portfolio_astro/public/football_uni_brum.jpg'
+        image_url : '/portfolio_astro/football_uni_brum.webp'
     },
     {
         title : 'Escuela de Fútbol Base Ciudad Real 2012-13 Season',
-        image_url : '/portfolio_astro/public/football_first.jpg'
+        image_url : '/portfolio_astro/football_first.webp'
     }
 ];
 ---
@@ -24,7 +24,7 @@ const PHOTOS = [
 </div>
 <p class="text-gray-500 dark:text-gray-400 font-bold mb-10">I consider sports to be a fundamental pillar of life, not only for its health benefits but also for its ability to foster discipline, camaraderie, and strong relationships.</p>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
     {PHOTOS.map(photo => (
         <figure class="relative max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 items-center">
             <div class="max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300 ease-in-out">

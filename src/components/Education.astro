@@ -2,31 +2,32 @@
 import EducationItem from "./EducationItem.astro";
 const EDUCATION = [
     {
-    date : 'September 2024 - June 2025',
-    title : 'Bachelor of Computer Science (Erasmus+)',
-    school: 'University of Birmingham',
-    school_logo: 'https://fundit.fr/sites/default/files/styles/max_650x650/public/actors/2281-universite-birmingham.png?itok=KBSykLre'
-
+        date : 'September 2024 - June 2025',
+        title : 'Bachelor of Computer Science (Erasmus+)',
+        school: 'University of Birmingham',
+        school_logo: 'https://fundit.fr/sites/default/files/styles/max_650x650/public/actors/2281-universite-birmingham.png?itok=KBSykLre'
     },
     {
-    date : 'September 2020 - Present',
-    title: 'Bachelor of Computer Science',
-    school: 'University of Castilla-La Mancha',
-    school_logo: 'https://www.cogitialbacete.org/wp-content/uploads/2023/09/UCLM-Logo.png'
-},
-{
-    date : 'September 2017 - June 2020',
-    title: 'Secondary Compulsary Education',
-    school: 'IES Santa María de Alarcos',
-    school_logo: 'https://iesalarcos.com/wp-content/uploads/2024/10/santa-maria-alarcos-logo.png' // Update this path to the correct image path
-}
+        date : 'September 2020 - Present',
+        title: 'Bachelor of Computer Science',
+        school: 'University of Castilla-La Mancha',
+        school_logo: 'https://www.cogitialbacete.org/wp-content/uploads/2023/09/UCLM-Logo.png'
+    },
+    {
+        date : 'September 2017 - June 2020',
+        title: 'Secondary Compulsary Education',
+        school: 'IES Santa María de Alarcos',
+        school_logo: 'https://iesalarcos.com/wp-content/uploads/2024/10/santa-maria-alarcos-logo.png'
+    }
 ];
 ---
 <h2 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl dark:text-white mb-7">Education</h2>
-<div class="grid grid-cols-3 gap-4 mt-4 md:grid-cols- justify-center">
-        {EDUCATION.map(education => (
-           <div class="max-w-sm p-9 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300 ease-in-out">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
+    {EDUCATION.map(education => (
+        <div class="flex justify-center">
+            <div class="max-w-sm p-9 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:scale-105 transition-transform duration-300 ease-in-out">
                 <EducationItem {...education} />
-            </div>              
-        ))}
+            </div>
+        </div>
+    ))}
 </div>
