@@ -29,23 +29,25 @@ const PROJECTS = [
     ]
 },
 {
-    title: 'Socios Web',
-    description : 'E-commerce project focused on providing services for sports companies. The website uses technologies such as HTML, CSS, and JavaScript on the frontend, while the backend was developed with Node.js and Express. The site will be launched soon.',
-    link: 'https://github.com/mariodamas/prueba_nueva',
-    image: '/portfolio_astro/socios_photo.webp',
-    text_link: 'Backend on GitHub',
+    title: 'EsiMedia',
+    description: 'Secure streaming platform developed with Angular on the frontend and Spring Boot on the backend. The project integrates controls inspired by 3FA, RBAC and ISO27001 best practices. Software quality was evaluated through testing, SonarQube metrics and core software engineering principles.',
+    image: '/portfolio_astro/esimedia.png',
+    link_frontend: 'https://github.com/manuc14/Frontend_ProyectoIntegrado_G06',
+    link_backend: 'https://github.com/manuc14/Backend_ProyectoIntegrado_G06',
     techs: [
-        { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png", name: "HTML5" },
-        { url: "https://skillforge.com/wp-content/uploads/2020/10/javascript.png", name: "JavaScript" },
-        {url:"https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png", name:"MySQL"},
-        {url:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png", name:"Node.js"},
-        
+        { url: "https://angular.io/assets/images/logos/angular/angular.svg", name: "Angular" },
+        { url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", name: "Spring Boot" },
+        { url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", name: "Java" },
+        { url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sonarqube/sonarqube-original.svg", name: "SonarQube" }
     ]
 }
+
 ];
 ---
 
-<h2 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl text-white mb-7">Projects</h2>
+<h2 class="mb-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-none">
+    <span class="gradient-text">Projects</span>
+</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
     {PROJECTS.map(project => (
         <div class="flex justify-center">

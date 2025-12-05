@@ -1,12 +1,6 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-const EXPERIENCE = [{
-    date : 'March 2024 - June 2024',
-    title: 'Assistant in Faculty Evaluation',
-    company: 'University of Castilla-La Mancha',
-    description: 'During this period, I led the strategic distribution of faculty evaluation surveys across multiple departments, ensuring high participation and coordinating with internal teams to optimize distribution processes and maximize efficiency.',
-    company_logo: 'https://www.cogitialbacete.org/wp-content/uploads/2023/09/UCLM-Logo.png'
-},
+const EXPERIENCE = [
 {
     date : 'May 2025 - August 2025',
     title: 'Software Engineer Internship',
@@ -16,8 +10,10 @@ const EXPERIENCE = [{
 }
 ];
 ---
-<h2 class="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-3xl lg:text-4xl text-white mb-7">Experience</h2> 
-<ol class="relative border-s border-gray-200 border-gray-700">
+<h2 class="mb-10 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-none">
+    <span class="gradient-text">Experience</span>
+</h2> 
+<ol class="relative border-s-2 border-violet-500/30">
                      
     {EXPERIENCE.map(experience => (
         <li class="mb-10 ms-4">

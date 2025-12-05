@@ -2,12 +2,14 @@
 const { date, title, img_link, link } = Astro.props;
 ---
 <div class="flex flex-col items-center text-center">
-    <img src={img_link} alt={title} class="w- h-20 mb-4" />
-    <div>
-        <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 text-white">{title}</h5>
+    <div class="w-20 h-20 mb-4 rounded-xl bg-white/10 p-2 flex items-center justify-center">
+        <img src={img_link} alt={title} class="w-full h-full object-contain" />
     </div>
-    <p class="mb-3 font-normal text-gray-500 text-gray-400">{date}</p>
-    <a href={link} target="_blank" class="inline-flex font-medium items-center text-blue-600">
+    <div>
+        <h5 class="mb-2 text-xl font-bold tracking-tight text-white">{title}</h5>
+    </div>
+    <p class="mb-3 font-medium text-gray-400">{date}</p>
+    <a href={link} target="_blank" class="inline-flex font-semibold items-center text-violet-400 hover:text-violet-300 transition-colors duration-300">
         Download Certificate
-    </p>
+    </a>
 </div>

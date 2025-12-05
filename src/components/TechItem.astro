@@ -2,11 +2,10 @@
 const { name, image_url } = Astro.props;
 ---
 <div class="relative inline-block group">
-    <div class="absolute z-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-900 text-white text-sm font-medium font-size-6 px-3 py-2 rounded-lg shadow-lg bg-gray-700">
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 z-10 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#0a0a0f] border border-white/10 text-white text-xs font-medium px-3 py-1.5 rounded-lg shadow-lg whitespace-nowrap">
         {name}
-        <div class="tooltip-arrow" data-popper-arrow></div>
     </div>
-    <img class="w- h-10 rounded-sm" src={image_url} alt={name}>
+    <img class="w-10 h-10 rounded-lg p-1 bg-white/10 hover:bg-white/20 transition-colors duration-300" src={image_url} alt={name}>
 </div>
 
 <style>

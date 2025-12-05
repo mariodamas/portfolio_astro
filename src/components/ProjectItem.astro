@@ -1,26 +1,40 @@
 ---
-const { title, description, link, image, text_link, techs } = Astro.props;
+const { title, description, link, image, text_link, techs, link_frontend, link_backend } = Astro.props;
 import TechItem from './TechItem.astro';
 ---
-<div class="w-full max-w-lg border border-gray-200 rounded-lg shadow-sm bg-gray-800 border-gray-700 flex flex-col h-full">
-    <div>
-        <img class="rounded-t-lg w-full h-48 object-cover" src={image} alt={title} />
+<div class="group w-full max-w-lg border border-white/10 rounded-2xl bg-gradient-to-b from-white/5 to-transparent backdrop-blur-sm flex flex-col h-full overflow-hidden hover:border-violet-500/30 transition-all duration-500 glow-on-hover">
+    <div class="relative overflow-hidden">
+        <img class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" src={image} alt={title} />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent"></div>
     </div>
-    <div class="p-5 flex-grow">
-        <a href={link}>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white">{title}</h5>
+    <div class="p-6 flex-grow">
+        <a href={link || link_frontend || '#'}>
+            <h5 class="mb-3 text-xl font-bold tracking-tight text-white group-hover:text-violet-300 transition-colors duration-300">{title}</h5>
         </a>
-        <p class="mb-3 font-normal text-gray-400">{description}</p>
+        <p class="mb-4 font-normal text-gray-400 text-sm leading-relaxed">{description}</p>
         <div class="flex flex-wrap gap-2 mt-4">
             {techs && techs.map(technology => (
                 <TechItem name={technology.name} image_url={technology.url} />
             ))}
         </div>
     </div>
-    <div class="p-5">
-        <a href={link} target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
-            {text_link}
-            <img src="/portfolio_astro/github.svg" alt="github logo" class="w-5 h-5 ml-2" />
-        </a>
+    <div class="p-6 pt-0 flex flex-col gap-2 w-full">
+        {link_frontend && link_backend ? (
+            <>
+                <a href={link_frontend} target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-center text-white bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl hover:from-emerald-500 hover:to-teal-500 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25">
+                    Frontend
+                    <img src="/portfolio_astro/github.svg" alt="github logo" class="w-5 h-5 ml-2" />
+                </a>
+                <a href={link_backend} target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-center text-white bg-gradient-to-r from-orange-600 to-amber-600 rounded-xl hover:from-orange-500 hover:to-amber-500 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25">
+                    Backend
+                    <img src="/portfolio_astro/github.svg" alt="github logo" class="w-5 h-5 ml-2" />
+                </a>
+            </>
+        ) : (
+            <a href={link} target="_blank" class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-center text-white bg-gradient-to-r from-violet-600 to-indigo-600 rounded-xl hover:from-violet-500 hover:to-indigo-500 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25">
+                {text_link}
+                <img src="/portfolio_astro/github.svg" alt="github logo" class="w-5 h-5 ml-2" />
+            </a>
+        )}
     </div>
 </div>
